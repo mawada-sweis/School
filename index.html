@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<!-- CSS link -->
+		<link rel="stylesheet" href="assets/style.css">
+		<title>School Managment System</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+			<div class="btn-group btn-group-lg">
+				<button type="button" class="btn btn-warning" onclick="showList();">Student list</button>
+				<button type="button" class="btn btn-warning" onclick="openAdd(true);">Add new student</button>
+				<button type="button" class="btn btn-warning" onclick="deleteStudent();">Delete an student</button>
+				<button type="button" class="btn btn-warning" onclick="searchID();">Update student information</button>
+		  </div>
+		</nav>					
+		<div id="information" style="display: none;">
+			<form class="needs-validation centerPage" novalidate>
+				<div class="form-row">
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom01">Student name</label>
+						<input type="text" class="form-control" id="validationCustom01" placeholder="Full name" required>
+					</div>
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom02">Student ID</label>
+						<input type="text" class="form-control" id="validationCustom02" placeholder="ID" required>
+					</div>
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom03">GDPA</label>
+						<input type="text" class="form-control" id="validationCustom03" placeholder="gdpa value" required>
+					</div>    
+				</div>
+				<button class="btn btn-warning" type="submit" id="submitAdding">Submit</button>
+			</form>
+		</div>
+
+		<div id="studentList" style="display: none;">
+			<ul class="nav justify-content-center centerPage">
+				<li class="nav-item" id="nameColumn">
+					<p class="nav-link disabled">Name</p>
+				</li>
+				<li class="nav-item" id="idColumn">
+					<p class="nav-link disabled">ID</p>
+				</li>
+				<li class="nav-item" id="gdpaColumn">
+					<p class="nav-link disabled">GDPA</p>
+				</li>
+			</ul>
+		</div>
+		
+		<div id="searchID" style="display: none;">
+			<div class="input-group justify-content-center centerPage">
+				<div class="form-outline">
+					<input type="search" id="searchIdNum" placeholder="ID search" class="form-control" />
+				</div>
+				<button type="button" class="btn btn-primary fas fa-search" id="searchBtn">search</button>
+			</div>
+
+			<div id="searchUpdate" style="display: none;">
+				<form class="needs-validation" novalidate>
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom01">Student name</label>
+							<input type="text" class="form-control" id="validationCustom04" placeholder="Full name" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom02">Student ID</label>
+							<input type="text" class="form-control" id="validationCustom05" placeholder="ID" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom03">GDPA</label>
+							<input type="text" class="form-control" id="validationCustom06" placeholder="gdpa value" required>
+						</div>    
+					</div>
+					<button class="btn btn-warning" type="submit" id="submitUpdate">Submit</button>
+				</form>
+			</div>
+		</div>
+
+		<div id="searchDelete" style="display: none;">
+			<div class="input-group justify-content-center centerPage">
+				<div class="form-outline">
+					<input type="search" id="deleteIdNum" placeholder="ID search" class="form-control" />
+				</div>
+				<button type="button" class="btn btn-primary fas fa-search" id="deleteBtn">search</button>
+			</div>
+		</div>
+		<script src="./src/main.js"></script>
+	</body>
+</html>

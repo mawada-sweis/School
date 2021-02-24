@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+    .container {
+        width: 80%;	      
+    }
+}
+body{
+    background-color: #ede0d4;
+}
+*{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.nav-item { text-align: center; }
+.centerPage{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+#searchUpdate{
+    padding-top: 5%;
+    margin-bottom: -50%;
+}
